@@ -1,0 +1,36 @@
+<Window xmlns="https://github.com/avaloniaui"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+        xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+        mc:Ignorable="d"
+        Width="550" Height="200"
+        MinWidth="550" MinHeight="200"
+        x:Class="Facturas.UI.DlgInserta"
+        Title="Facturas">
+    <Border>
+    <DockPanel Margin="5">
+        <StackPanel DockPanel.Dock="Bottom" Margin="5"
+                    Orientation="Horizontal" HorizontalAlignment="Right">
+            <Button Margin="5" Name="btCancela" Content="Cancela" />
+            <Button Margin="5" Name="btGuarda" Content="Guarda" />
+        </StackPanel>
+        <StackPanel Margin="20" DockPanel.Dock="Right" VerticalAlignment="Center">
+            <DockPanel Margin="5">
+                <Label DockPanel.Dock="Left" Content="Empresa"/>
+                <TextBox Name="edEmpresa" DockPanel.Dock="Right" />
+            </DockPanel>        
+            <DockPanel Margin="5">
+                <Label DockPanel.Dock="Left" Content="Bruto"/>
+                <Label DockPanel.Dock="Right" Content="€" />
+                <TextBox Name="edBruto" DockPanel.Dock="Right" TextAlignment="Right" />
+            </DockPanel>
+            <DockPanel Margin="5">
+                <Label DockPanel.Dock="Left" Content="Total"/>
+                <Label DockPanel.Dock="Right" Content="€" />
+                <TextBox Name="edTotal" DockPanel.Dock="Right"
+                         IsEnabled="False" TextAlignment="Right" />
+            </DockPanel>
+        </StackPanel>
+    </DockPanel>
+    </Border>
+</Window>

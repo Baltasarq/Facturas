@@ -1,0 +1,62 @@
+<Window xmlns="https://github.com/avaloniaui"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+        xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+        mc:Ignorable="d"
+        Width="600" Height="350"
+        MinWidth="600" MinHeight="350"
+        x:Class="Facturas.UI.MainWindow"
+        Title="Facturas">
+    <Border>
+    <DockPanel Margin="5">
+        <Menu DockPanel.Dock="Top">
+            <MenuItem Header="_Archivo">
+                <MenuItem Header="_Salir" Name="opSalir" HotKey="Ctrl+Q"/>
+            </MenuItem>
+            <MenuItem Header="_Editar">
+                <MenuItem Header="_Inserta" Name="opInserta" />
+                <MenuItem Header="_Modifica" Name="opModifica" />
+                <MenuItem Header="_Elimina" Name="opElimina" HotKey="Ctrl+Delete" />
+            </MenuItem>
+            <MenuItem Header="_Ver">
+                <MenuItem Header="_Siguiente" Name="opSig" HotKey="Ctrl+Right" />
+                <MenuItem Header="_Anterior" Name="opAnt" HotKey="Ctrl+Left"/>
+            </MenuItem>
+            <MenuItem Header="_Help">
+                <MenuItem Header="_About" Name="opAbout" />
+            </MenuItem>
+        </Menu>
+        <Label DockPanel.Dock="Bottom"
+               Name="lblTotal" Content="Posición: 0 | Facturas: 0 | Total: 0€"/>
+        <StackPanel Margin="20" DockPanel.Dock="Left" VerticalAlignment="Center">
+            <Button HorizontalAlignment="Stretch" HorizontalContentAlignment="Center"
+                    Margin="5" Name="btSig" Content="Siguiente" />
+            <Button HorizontalAlignment="Stretch"  HorizontalContentAlignment="Center"
+                    Margin="5" Name="btAnt" Content="Anterior" />
+            <Button HorizontalAlignment="Stretch"  HorizontalContentAlignment="Center"
+                    Margin="5" Name="btModifica" Content="Modifica" />
+            <Button HorizontalAlignment="Stretch"  HorizontalContentAlignment="Center"
+                    Margin="5" Name="btInserta" Content="Inserta" />
+            <Button HorizontalAlignment="Stretch"  HorizontalContentAlignment="Center"
+                    Margin="5" Name="btElimina" Content="Elimina" />
+        </StackPanel>
+        <StackPanel Margin="20" DockPanel.Dock="Right" VerticalAlignment="Center">
+            <DockPanel Margin="5">
+                <Label DockPanel.Dock="Left" Content="Empresa"/>
+                <TextBox Name="edEmpresa" DockPanel.Dock="Right" />
+            </DockPanel>        
+            <DockPanel Margin="5">
+                <Label DockPanel.Dock="Left" Content="Bruto"/>
+                <Label DockPanel.Dock="Right" Content="€" />
+                <TextBox Name="edBruto" DockPanel.Dock="Right" TextAlignment="Right" />
+            </DockPanel>
+            <DockPanel Margin="5">
+                <Label DockPanel.Dock="Left" Content="Total"/>
+                <Label DockPanel.Dock="Right" Content="€" />
+                <TextBox Name="edTotal" DockPanel.Dock="Right"
+                         IsEnabled="False" TextAlignment="Right" />
+            </DockPanel>
+        </StackPanel>
+    </DockPanel>
+    </Border>
+</Window>
