@@ -64,7 +64,7 @@ public partial class DlgInserta : Window {
         }
 
         f.Bruto = bruto;
-        edTotal!.Text = f.Total + "";
+        edTotal!.Text = $"{f.Total:000.00}";
     }
     
     public string Empresa { get; private set; }

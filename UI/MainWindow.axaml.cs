@@ -132,7 +132,7 @@ public partial class MainWindow : Window {
             edTotal!.Text = "N/D";
         }
 
-        lblTotal!.Content = $"Factura {this.pos + 1} / {numFacturas} | Total {this.facturas.Total}€";
+        lblTotal!.Content = $"Factura {this.pos + 1} / {numFacturas} | Total {this.facturas.Total:000.00}€";
     }
 
     RegistroFacturas facturas;
